@@ -41,18 +41,18 @@ html {
     position: relative;
 }
 
-.logo-box {
+.header__logo-box {
     /*it is for logo to be a little bit */
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
-.logo:hover {
+.header__logo:hover {
     -webkit-animation-name: moveInRight;
     -moz-animation-name: moveInRight;
     -o-animation-name: moveInRight;
@@ -66,7 +66,7 @@ html {
     margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     letter-spacing: 3.5rem;
@@ -77,7 +77,7 @@ html {
     animation-timing-function: ease-out;
 }
 
-.heading-primary-secondary {
+.heading-primary--secondary {
     display: block;
     font-size: 2rem;
     font-weight: 400;
@@ -87,7 +87,7 @@ html {
     animation-timing-function: ease-out;
 }
 
-.text-box { /*amazing way to middle an element*/
+.header__text-box { /*amazing way to middle an element*/
     position: absolute;
     top: 50%; /*remember the position begins from the begining of the box not the center*/
     left: 50%;
@@ -148,7 +148,7 @@ html {
     position: relative;
 }
 
-.btn-white {
+.btn--white {
     background-color: white;
     color: #777;
 }
@@ -176,7 +176,7 @@ html {
     position: absolute;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: white;
 }
 
@@ -185,7 +185,7 @@ html {
     opacity: 0; /*this will gives the fadding animation*/
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom 3s ease-out .95s;
     animation-fill-mode: backwards;
 }
