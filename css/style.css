@@ -1,0 +1,192 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Lato", "Courier New";
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #7777;
+    /*padding: 30px;*/ /*remember this is not inherited*/
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /*100 percent is 16 since we want 10*/
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+            to right,
+            rgba(126, 213, 111, 0.8),
+            rgba(40, 100, 131, 0.8)
+    ),
+    url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top; /*th1e part where it remains where it crops*/
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    position: relative;
+}
+
+.logo-box {
+    /*it is for logo to be a little bit */
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+.logo {
+    height: 3.5rem;
+}
+
+.logo:hover {
+    -webkit-animation-name: moveInRight;
+    -moz-animation-name: moveInRight;
+    -o-animation-name: moveInRight;
+    animation-name: moveInRight;
+}
+
+.heading-primary {
+    color: #ffffff;
+    text-transform: uppercase;
+    backface-visibility: hidden; /*for the upper movement does work with rotation*/
+    margin-bottom: 6rem;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+.heading-primary-secondary {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1.7rem;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+.text-box { /*amazing way to middle an element*/
+    position: absolute;
+    top: 50%; /*remember the position begins from the begining of the box not the center*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        transform: translate(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translate(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link, .btn:visited { /*visited is when clicked it gets purple*/
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4em;
+    border-radius: 10rem;
+    display: inline-block;
+    -webkit-transition: all .2s; /* it is way to specify which properties*/
+    -moz-transition: all .2s; /*gets to be animated which in this case is all*/
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn-white {
+    background-color: white;
+    color: #777;
+}
+
+.btn:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.btn:active { /*when the link is clicked*/
+    transform: translateY(-.1rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.btn::after {
+    content: ""; /*always specify content psuedo elements */
+    display: inline-block; /*this also basically it is the child of btn*/
+    height: 100%; /*same height as its parents*/
+    width: 100%;
+    border-radius: 10rem;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    position: absolute;
+}
+
+.btn-white::after {
+    background-color: white;
+}
+
+.btn:hover::after { /*the after element will fade*/
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; /*this will gives the fadding animation*/
+}
+
+.btn-animated {
+    animation: moveInBottom 3s ease-out .95s;
+    animation-fill-mode: backwards;
+}
+
