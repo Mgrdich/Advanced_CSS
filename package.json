@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mgrdich/Advanced_CSS.git"
+  },
+  "author": "Mgo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mgrdich/Advanced_CSS/issues"
+  },
+  "homepage": "https://github.com/Mgrdich/Advanced_CSS#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
