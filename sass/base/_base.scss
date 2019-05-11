@@ -1,0 +1,24 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*100 percent is 16 since we want 10*/
+  /*this defines what one rem is*/
+}
+
+
+
+
+
+
+
+
+
+

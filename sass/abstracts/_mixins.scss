@@ -1,0 +1,7 @@
+@mixin clearfix {/*this is because of float height */
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
