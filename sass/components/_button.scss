@@ -1,0 +1,59 @@
+.btn {
+  &:link, &:visited { /*visited is when clicked it gets purple*/
+
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4em;
+    border-radius: 10rem;
+    display: inline-block;
+    -webkit-transition: all .2s; /* it is way to specify which properties*/
+    -moz-transition: all .2s; /*gets to be animated which in this case is all*/
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    position: relative;
+  }
+
+  &--white {
+    background-color: white;
+    color: #777;
+  }
+
+  &:hover {
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+    &::after { /*the after element will fade*/
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; /*this will gives the fadding animation*/
+    }
+  }
+
+  &:active { /*when the link is clicked*/
+    transform: translateY(-.1rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+  }
+
+  &::after {
+    content: ""; /*always specify content psuedo elements */
+    display: inline-block; /*this also basically it is the child of btn*/
+    height: 100%; /*same height as its parents*/
+    width: 100%;
+    border-radius: 10rem;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    position: absolute;
+  }
+
+  &--white::after {
+    background-color: white;
+  }
+
+  &--animated {
+    animation: moveInBottom 3s ease-out .95s;
+    animation-fill-mode: backwards;
+  }
+
+}

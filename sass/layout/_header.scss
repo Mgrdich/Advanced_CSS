@@ -1,0 +1,40 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+                  to right,
+                  rgba($color-primary-light, 0.8),
+                  rgba($color-primary-dark, 0.8)
+  ),
+  url(../../img/hero.jpg);
+  background-size: cover;
+  background-position: top; /*th1e part where it remains where it crops*/
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+
+  &__logo-box {
+    /*it is for logo to be a little bit */
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+
+    &:hover {
+      -webkit-animation-name: moveInRight;
+      -moz-animation-name: moveInRight;
+      -o-animation-name: moveInRight;
+      animation-name: moveInRight;
+    }
+  }
+
+  &__text-box { /*amazing way to middle an element*/
+    position: absolute;
+    top: 50%; /*remember the position begins from the begining of the box not the center*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+}
