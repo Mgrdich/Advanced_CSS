@@ -1,8 +1,8 @@
 body {
   font-family: "Lato", "Courier New";
   font-weight: 400;
-  font-size: 1.6rem;
-  color: #7777;
+  font-size: $default-font-size;
+  color:#777777;
   /*padding: 30px;*/
   /*remember this is not inherited*/
   padding: 3rem;
@@ -51,5 +51,19 @@ body {
   &:hover {
     transform: skewY(2deg);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, .2);
+  }
+}
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
   }
 }
