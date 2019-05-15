@@ -165,6 +165,10 @@ body {
       transform: rotateY(180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to right, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right, #2998ff, #5643fa); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
@@ -177,9 +181,13 @@ body {
       background-blend-mode: screen;
       clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
     .card__picture--2 {
-      background-image: url("../img/nat-5.jpg"); }
-    .card__picture--2 {
-      background-image: url("../img/nat-5.jpg"); }
+      background-image: linear-gradient(to right, #7ed56f, #28b485), url("../img/nat-6.jpg");
+      background-blend-mode: screen;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right, #2998ff, #5643fa), url("../img/nat-7.jpg");
+      background-blend-mode: screen;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
   .card__heading {
     /*to be on the picture*/
     font-size: 2.8rem;
@@ -192,11 +200,45 @@ body {
     width: 75%;
     text-align: right; }
   .card__heading-span {
-    padding: 1rem 1.5rem;
+    padding: 0rem 1.5rem;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      color: black; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: white; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 .composition {
   position: relative; }
