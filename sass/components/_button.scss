@@ -19,6 +19,16 @@
     color: #777;
   }
 
+  &--green {
+    background-color: $color-primary;
+    color: white;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+
   &:hover {
     transform: translateY(-.3rem);
     box-shadow: 0 1rem 2rem rgba($color-black, .2);
@@ -35,6 +45,7 @@
   }
 
   &::after {
+
     content: ""; /*always specify content psuedo elements */
     display: inline-block; /*this also basically it is the child of btn*/
     height: 100%; /*same height as its parents*/
@@ -68,14 +79,16 @@
     padding: 3px;
     transition: all .2s;
   }
+
   &:hover {
     color: white;
     background-color: $color-primary;
-    box-shadow: 0 1rem 2rem rgba($color-black,.15);
+    box-shadow: 0 1rem 2rem rgba($color-black, .15);
     transform: translateY(-2px);
   }
+
   &:active {
-    box-shadow:0 .5rem 2rem rgba($color-black,.15);
+    box-shadow: 0 .5rem 2rem rgba($color-black, .15);
     transform: translateY(0px);
   }
 }

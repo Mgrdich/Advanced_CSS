@@ -5,11 +5,12 @@
                   rgba($color-primary-light, 0.8),
                   rgba($color-primary-dark, 0.8)
   ),
-  url(../../img/hero.jpg);
+  url("../../img/hero.jpg");
   background-size: cover;
   background-position: top; /*th1e part where it remains where it crops*/
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   position: relative;
+
 
   &__logo-box {
     /*it is for logo to be a little bit */

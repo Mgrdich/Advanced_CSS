@@ -11,7 +11,7 @@
                   rgba($color-primary-light, 0.8),
                   rgba($color-primary-dark, 0.8)
   ),
-  url(../../img/nat-4.jpg);
+  url("../../img/nat-4.jpg");
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -12rem;
@@ -25,4 +25,8 @@
   background-color: $color-grey-light-1;
   margin-top: -14rem;
 
+}
+.section-stories {
+  padding: 15rem 0;
+  background-color: $color-grey-light-1;
 }
